@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@import './app/components/login/login.component.scss';
+@import './app/components/home/home.component.scss';
+
+@include mat-core();
+
+$primary: mat-palette($mat-blue, 800);
+$accent:  mat-palette($mat-pink);
+$warn:    mat-palette($mat-red);
+$candy-app-theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($candy-app-theme);
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@include theme-login($candy-app-theme);
+@include theme-home($candy-app-theme);
+

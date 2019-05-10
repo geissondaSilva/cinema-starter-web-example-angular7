@@ -1,0 +1,101 @@
+@mixin theme-home($theme){
+    $primary: map-get($theme, primary);
+
+    app-home{
+        .capa{
+            height: 50vh;
+            background-image: url('assets/capa.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .btn-singin{
+            position: absolute;
+            top: 16px;
+            right: 16px;
+        }
+
+        .barra-principal{
+            height: 80px;
+            border-radius: 0;
+            padding: 0 10vw;
+            border-bottom: 1px solid #e8eaed;
+        }
+
+        .campo-busca{
+            min-width: 0;
+            display: none;
+        }
+
+        .icon-busca{
+            transition: all 200ms cubic-bezier(0.51, 0.83, 0.78, 0.82);
+            margin-left: 100%;
+        }
+
+        .filmes{
+            padding: 32px 10vw;
+        }
+
+        .grid-filmes{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 32px;
+        }
+
+        .filme{
+            height: 420px;
+            border: 1px solid #e8eaed;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .filme-header{
+            border-top: 1px solid #e8eaed;
+            position: relative;
+            padding: 16px;
+            padding-top: 24px;
+            color: #b6b6b6;
+        }
+
+        .time-content{
+            position: absolute;
+            right: 16px;
+            top: -15px;
+            z-index: 2;
+            height: 30px;
+            cursor: pointer;
+            padding: 6px 16px;
+            box-sizing: border-box;
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: #ffffff;
+            color: mat-color($primary);
+            box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+        }
+
+        .filme-content{
+            background-color: #f7f7f7;
+        }
+
+        .title{
+            color: mat-color($primary);
+            font-size: 14pt;
+        }
+
+        .filme-title{
+            font-size: 14pt;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .filme-subtitle{
+            font-size: 12pt;
+            text-align: justify;
+        }
+
+        .duracao{
+            color: map-get($primary, A400);
+        }
+    }
+}

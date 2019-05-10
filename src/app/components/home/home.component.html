@@ -1,0 +1,51 @@
+<div class="capa">
+    <a [routerLink]="['/login']" routerLinkActive="router-link-active"  mat-button color="primary" class="btn-singin">Login</a>
+</div>
+<div class="barra-principal" fxLayout="row" fxLayoutAlign="center center">
+    <div class="title" fxFlex>Hoje</div>
+    <div fxLayout="row" fxLayoutGap="16px">
+        <button mat-icon-button>
+            <mat-icon>arrow_back</mat-icon>
+        </button>
+        <button mat-icon-button>
+            <mat-icon>today</mat-icon>
+        </button>
+        <button mat-icon-button>
+            <mat-icon>arrow_forward</mat-icon>
+        </button>
+    </div>
+    <div fxFlex fxLayoutAlign="end center">
+        <button (click)="abrirCampo()" id="btnSearch" class="icon-busca" mat-icon-button color="primary">
+            <mat-icon>search</mat-icon>
+        </button>
+        <input #inputSearch class="campo-busca" fxFlex type="text">
+    </div>
+</div>
+
+<div class="filmes">
+    <div class="grid-filmes">
+        <div fxLayout="column" class="filme">
+            <div class="filme-content" fxFlex></div>
+            <div class="filme-header" fxLayout="column" fxLayoutGap="12px">
+                <div class="time-content">12:30 am</div>
+                <div class="filme-title">Vingadores Guerra infinita</div>
+                <div class="filme-subtitle">Este é um filme da marvel que é uma sequencia dos outros filmes de vingadores</div>
+                <div fxLayout="row">
+                    <div fxFlex>
+                        <div class="duracao" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+                            <mat-icon>timer</mat-icon>
+                            <span>1H 30min</span>
+                        </div>
+                    </div>
+                    <div fxLayout="row" fxLayoutGap="8px">
+                        <mat-icon color="primary">star</mat-icon>
+                        <mat-icon color="primary">star</mat-icon>
+                        <mat-icon color="primary">star</mat-icon>
+                        <mat-icon color="primary">star</mat-icon>
+                        <mat-icon color="primary">star</mat-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
